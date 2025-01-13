@@ -1,42 +1,30 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
 Disallow: /private/
+Disallow: /tmp/
+Disallow: /config/
+Allow: /
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+Sitemap: https://clairvoyancemedium.github.io/palitlig-och-snabb-spadom-via-e-post.github.io/sitemap.xml
+User-agent: Googlebot
+Disallow: /config/
+Crawl-delay: 10
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+User-agent: Bingbot
+Disallow: /config/
+Crawl-delay: 10
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+# SEO-specific directives
+User-agent: *
+Allow: /public/
 Allow: *.css
 Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
-User-agent: Bingbot
-Allow: /
-
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
-Disallow: /
-
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+Allow: *.jpg
+Allow: *.png
+Allow: *.gif
+Allow: *.webp
