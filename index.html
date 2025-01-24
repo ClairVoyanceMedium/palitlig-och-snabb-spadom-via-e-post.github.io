@@ -397,29 +397,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
 
-    <!-- JSON-LD for Product -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Spådomskonsultation via E-post",
-        "description": "Spådom via e-post 24/7 med Frederick. Frågor från 6€.",
-        "image": "https://clairvoyancemedium.github.io/images/voyance.jpg",
-        "brand": {
-            "@type": "Brand",
-            "name": "ClairvoyanceMedium.com"
-        },
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "EUR",
-            "price": "6",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2065-12-31",  // Price validity date
-            "url": "https://clairvoyancemedium.github.io/palitlig-och-snabb-spadom-via-e-post.github.io/"
-        }
-    }
-    </script>
-
     <!-- Unique Speakable Tag -->
     <script type="application/ld+json">
     {
@@ -442,91 +419,93 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
 
     <!-- Other meta tags and links for client testimonials -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Spådomskonsultation via E-post",
-        "description": "Spådom via e-post 24/7 med Frederick. Frågor från 6€.",
-        "image": "https://clairvoyancemedium.github.io/images/voyance.jpg",
-        "brand": {
-            "@type": "Brand",
-            "name": "ClairvoyanceMedium.com"
-        },
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "EUR",
-            "price": "6",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2095-12-31",
-            "url": "https://clairvoyancemedium.github.io",
-            "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0.00",
-                    "currency": "EUR"
+    <!-- JSON-LD for Product -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Spådomskonsultation via E-post",
+    "description": "Spådom via e-post 24/7 med Frederick. Frågor från 6€.",
+    "image": "https://clairvoyancemedium.github.io/images/voyance.jpg",
+    "brand": {
+        "@type": "Brand",
+        "name": "ClairvoyanceMedium.com"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "6",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2065-12-31",
+        "url": "https://clairvoyancemedium.github.io/palitlig-och-snabb-spadom-via-e-post.github.io/",
+        "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0.00",
+                "currency": "EUR"
+            },
+            "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "HUR"  // Valeur d'énumération non valide, devrait être "HUR" pour "heures"
                 },
-                "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 0,
-                        "unitCode": "HUR"
-                    },
-                    "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 0,
-                        "unitCode": "HUR"
-                    }
-                },
-                "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "SE"
+                "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "HUR"  // Valeur d'énumération non valide, devrait être "HUR" pour "heures"
                 }
             },
-            "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "returnPolicyCategory": "https://schema.org/NoReturnsAccepted"
+            "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "SE"
             }
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "300"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Anna"
-                },
-                "datePublished": "2024-12-25",
-                "reviewBody": "Jag var skeptisk först, men Frederick övertygade mig.",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                }
+        "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/NoReturnsAccepted",  // Valeur d'énumération non valide, devrait être une URL valide comme "https://schema.org/MerchantReturnUnspecified"
+            "applicableCountry": "SE"  // Champ manquant ajouté
+        }
+    },
+    "aggregateRating": {  // Champ manquant ajouté
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "300"
+    },
+    "review": [  // Champ manquant ajouté
+        {
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": "Anna"
             },
-            {
-                "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Erik"
-                },
-                "datePublished": "2024-12-20",
-                "reviewBody": "Frederick förvandlade mina tvivel till säkerheter.",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                }
+            "datePublished": "2024-12-25",
+            "reviewBody": "Jag var skeptisk först, men Frederick övertygade mig.",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": "Erik"
+            },
+            "datePublished": "2024-12-20",
+            "reviewBody": "Frederick förvandlade mina tvivel till säkerheter.",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+            }
+        }
+    ]
+}
+</script>
 
     <script type="application/ld+json">
 [
